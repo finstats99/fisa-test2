@@ -30,5 +30,17 @@ jobs:
 
     - name: load
       run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+
+    - name: run test2.py
+      run: |
+        python test2.py
+
+    - name: Commit & push data
+      run: |
+        # json 파일 생성해서 저장하게 코드 작성
+
       
       
